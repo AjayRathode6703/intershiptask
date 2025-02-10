@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+nav{
+    background-color: rgb(108, 246, 108);
+    height: 80px;
+    width: 100%;
+}
+nav h1{
+    font-size: 30px;
+    text-align: center;
+}
+img{
+    height: 80px;
+    width:70px;
+}
+#a{
+    display: flex;
+    margin-top: 40px;
+  
+}
+#b{
+    display: flex;
+}
+#c{
+    margin-left: 30px;
+    font-size: 20px;
+    margin-top: 40px;
+}
+#d{
+    height: 90px;
+    margin-left: 90px;
+    width: 90px;
+}
+#e{
+    font-size: 20px;
+    margin-left: 80px;
+}
+#f{
+    display: flex;
+}
+.rf{
+    height: 100px;
+    width: 100px;
+    margin-left: 90px;
+}
+#g{
+    height: 150px;
+    width: 150px;
+    margin-left: 420px;
+}
+#h{
+    height: 120px;
+    width: 160px;
+    margin-left: 650px;
+   
+
+}
+footer{
+    background-color: rgb(108, 246, 108);
+    height: 80px;
+    width: 100%;
+
+}
+footer h1{
+    font-size: 30px;
+    text-align: center;
+}
+footer h1 h2{
+    font-size: 30px;
+    text-align: center;
+}
+.center1{
+    height: 700px;
+    width: 850px;
+    border:7px solid blue;
+    box-shadow:20px 19px 20px gray;
+   
+}
+.center2{
+    height: 690px;
+    width: 840px;
+    border:7px solid red;
+   
+}
+.center{
+    margin-left: 300px;
+    margin-top: 20px;
+    position: absolute;
+    
+  
+}
+.center:hover{
+    animation: box  alternate 1s ;
+    
+}
+
+ @keyframes box{
+
+    from{
+        left:0;
+    }
+    to{
+        left:300px
+    }
+    
+}
+#aa{
+    margin-top: 50px;
+    margin-left: 30px;
+    font-size: 20px;
+}
+#bb{
+    margin-left: 300px;
+    font-size: 20px;
+}
+
