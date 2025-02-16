@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body class="flex items-center justify-center bg-gray-300">
+     
+
+
+
+
+    <div class=" h-86  mt-50 w-80 bg-white rounded-2xl border-2 border-blue-500">
+        <h1 class="flex justify-center text-2xl font-bold mt-8">LOGIN</h1>
+        
+        <h1 class="pl-18 " id="msg"></h1>
+<div class="m-6">
+    <input class="border-2 border-blue-500 w-60 p-5 h-10 rounded-2xl" type="text" id="uname" placeholder="enter your username">
+</div>
+
+<div class="m-6">
+    <input  class="border-2 border-blue-500 w-60 p-5 h-10 rounded-2xl" type="password" id="pwd" placeholder="enter your password">
+</div>
+<div class="button">
+    <button class="h-10 w-50 bg-blue-500 text-white text-2xl font-bold ml-12 mt-10 rounded-2xl" onclick="login()">Login</button>
+</div>
+
+    </div>
+    <script>
+        
+function login(){
+ var uname = document.getElementById('uname').value;
+ var pwd = document.getElementById('pwd').value;
+ var h1ele =document.getElementById('msg')
+ if(uname=="")
+ {
+   h1ele.innerHTML="please fill username first"
+   return
+ }
+ if (pwd=="")
+ {
+    h1ele.innerHTML = "please fil password first"
+ } else if
+     (uname=="ajay rathod" && pwd=="123"){
+        h1ele.innerHTML = "login success"
+    }
+else 
+      {
+        h1ele.innerHTML = "login failed"
+      }
+    }
+
+    </script>
+</body>
+</html>
