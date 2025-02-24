@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body  class="bg-[#01061d] text-white">
+   <div class="flex justify-center items-center mt-4">
+    <div class="h-[670px] w-96 bg-[#334679] shadow-2xl shadow-blue-900 mt-6 rounded-sm">
+        <h1 class="text-2xl font-bold flex justify-center mt-6">Create An Account</h1>
+        <h4 class=" ml-5 m-2 ">Full Name</h4>
+        <input class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 pl-3 hover:border-sky-500 focus:outline-sky-500" id="input" type="text" placeholder="Enter your fullname">
+
+        
+        <h4 class=" ml-5 m-2 ">Email Address</h4>
+        <input class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 pl-3 hover:border-sky-500 focus:outline-sky-500"  id="input2" type="text" placeholder="Enter your email address">
+        <h4 class=" ml-5 m-2 ">City</h4>
+        <input class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 pl-3 hover:border-sky-500 focus:outline-sky-500"  id="input3" type="text" placeholder="Enter your city">
+        <h4 class=" ml-5 m-2 ">Address</h4>
+        <input class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 pl-3 hover:border-sky-500 focus:outline-sky-500"  id="input4" type="text" placeholder="Enter your address">
+        <h4 class=" ml-5 m-2 ">password</h4>
+        <input class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 pl-3 hover:border-sky-500 focus:outline-sky-500"  id="input5" type="text" placeholder="Enter your password">
+        <h4 class=" ml-5 m-2 ">Confirm password</h4>
+        <input class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 pl-3 hover:border-sky-500 focus:outline-sky-500"  id="input6" type="text" placeholder="Enter your confirm password"><br>
+        <a href="#"><button class=" h-10 w-88 text-[#2EF2FF] font-bold hover:bg-[#01061d] mt-3 bg-[#263466] rounded-md ml-4 text-md   " onclick="ragstr()">REGISTER</button></a>
+        <h5 class="flex justify-center mt-4">Already have an account? <a class="text-md pl-2 font-bold text-[#2EF2FF]" href="login.html">Sign In</a></h5>
+       
+    </div>
+   </div>
+   
+
+        <script>
+            var  ragistration=[]
+            function ragstr(){
+                let a=document.getElementById('input').value
+           
+            let c=document.getElementById('input2').value
+            let d=document.getElementById('input3').value
+            let e=document.getElementById('input4').value
+            let f=document.getElementById('input5').value
+            let g=document.getElementById('input6').value
+   var obj={
+   FullName:a,
+
+   emailaddress:c,
+   city:d,
+   address:e,
+   password:f,
+   confirmpassword:g,
+   }
+   ragistration.push(obj)
+   console.log(ragistration)
+   localStorage.setItem("ragistration",JSON.stringify(ragistration))
+alert( "  ✔ registration success")
+window.location.href = "login.html";
+            }
+          
+
+           
+        </script>
+    
+
+        
+
+
+    
+    
+</body>
+</html>
