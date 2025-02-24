@@ -1,71 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="task5.css">
+    <title>Document</title>
 </head>
-
-<body class="bg-gray-400 flex justify-center  mt-50">
-
-    <div class="w-123 h-123 border-2 bg-white border-blue-500 rounded-2xl">
-        <h1 class="text-3xl  text-blue-500 font-bold text-center mt-10"> simple calculator</h1>
-        <input class="h-10 w-50 border-blue-500 border-2 ml-10 mt-20 rounded-xl pl-3" type="text" id="input1">
-        <input class="h-10 w-50 border-blue-500 border-2 rounded-xl pl-3" type="text" id="input2">
-        <h1 class="h-10 w-60 border-2 border-blue-500 ml-30 rounded-2xl text-center mt-10" id="show"></h1>
-        <div class="mt-20">
-            <button class="h-14 w-14 bg-gray-400 rounded-xl text-2xl ml-12" onclick="calsi('add')">+</button>
-            <button class="h-14 w-14 bg-gray-400 rounded-xl text-2xl ml-12" onclick="calsi('minus')" >-</button>
-            <button class="h-14 w-14 bg-gray-400 rounded-xl text-2xl ml-12"onclick="calsi('mul')" >*</button>
-            <button class="h-14 w-14 bg-gray-400 rounded-xl text-2xl ml-12" onclick="calsi('divide')">/</button>
-        </div>
+<body class="bg-gray-400 flex justify-center mt-50">
+    <div class="h-96 w-96 bg-white">
+        <input class="ml-8 rounded- h-9 w-80 border-2 border-blue-300 mt-10 pl-3" id="field" placeholder="search your name" type="text" onkeyup="search()">
+        <h1 id="list"></h1>
     </div>
+   
 
+    
     <script>
-        function calsi(a) {
-            var i = document.getElementById('input1').value
-            var j = document.getElementById('input2').value
-            var show = document.getElementById('show')
-
-            var res;
-            switch (a) {
-                case "add":
-                    res = parseFloat(i) + parseFloat(j)
-                    show.innerHTML = res
-                    break ;
-
-                    case "minus":
-                    res = parseFloat(i) - parseFloat(j)
-                    show.innerHTML = res
-                    break ;
-
+        var list=document.getElementById("list")
+        var arr=["arshadeep","harshit","Rohit","Virat","Yashashvi","shreya","Rishabh","bumrah","chahal","ajay"]
+        arr.map((v)=>{
+        list.innerHTML+=v + "<br>"
+        })
+        function search(){
+            mod=arr.filter((v)=>
+                v.startsWith(document.getElementById('field').value))
+                list.innerHTML=mod.join(document.getElementById('field').value + "<br/>")
             
-                    case "mul":
-                    res = parseFloat(i) * parseFloat(j)
-                    show.innerHTML = res
-                    break ;
-
-                    case "divide":
-                    res = parseFloat(i) / parseFloat(j)
-                    show.innerHTML = res
-                    break ;
-            
-            
-
-            
-                   
-            }
-
-
-
         }
-
-
-    </script>
-
+    </script>                                                                                                                                                                                                                                                       
 </body>
-
 </html>
