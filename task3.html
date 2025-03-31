@@ -4,246 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAILWINDCSS</title>
-   
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="task3.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class=" bg-slate-900 ">
-   <nav class="h-16 bg-gray-800 sticky top-0  ">
+<body class="bg-slate-900">
+   <nav class="h-16 bg-gray-800 sticky top-0">
     <div class="flex justify-center">
-        <img class="h-12 w-25 mt-1" src="img7.png">
-       
+        <img class="h-12 w-auto mt-1" src="img7.png" alt="Logo">
     </div>
-
    </nav>
    
-    <div class="bg-[url(Background.png)] w-full h-screen bg-cover  top-0 ">
-        <div class="pt-40 pl-20">
-            <p class="text-white text-xl">Empowering innovation through technology and creativity</p>
-            <h1 class="text-white text-5xl font-sans font-bold">WE BUILD EASY,FUN & QUALITY</h1>
-            <span class="text-5xl font-extrabold bg-gradient-to-r from-blue-500 to-pink-700 bg-clip-text text-transparent">PORODUCTS.</span>
+    <div class="bg-[url(Background.png)] w-full h-screen bg-cover">
+        <div class="pt-20 md:pt-40 px-4 md:pl-20">
+            <p class="text-white text-lg md:text-xl">Empowering innovation through technology and creativity</p>
+            <h1 class="text-white text-3xl md:text-5xl font-sans font-bold">WE BUILD EASY, FUN & QUALITY</h1>
+            <span class="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-500 to-pink-700 bg-clip-text text-transparent">PRODUCTS.</span>
             <div class="mt-4">
-             <button class="h-10 w-30 font-bold  text-white rounded-4xl bg-blue-600"><a href="#">Know More</a></button>
+                <button class="h-10 px-6 border-none font-bold text-white rounded-full bg-blue-600 hover:bg-blue-700 transition"><a href="#">Know More</a></button>
             </div>
         </div> 
-        
-       
-        </div>
-        <div class="h-screen">
-            <div class="flex">
-                <div>
-                    <div class="mt-20 ml-24">
-                        <span class="text-7xl bg-gradient-to-r font-bold from-blue-600 to-pink-500 text-transparent bg-clip-text">Who We Are?</span>
-                    </div>
-                    <div class="ml-24 mt-10">
-                        <p class="text-white text-3xl ">We are team of passionate technology <br> 
-                            experts and gamming enthusiats, dedicated <br>
-                            to delivering easy + quality software and <br>
-                            immersive gamming experiences.
-                        </p>
-                    </div>
-                </div>
-                
-       <div class="h-96 bg-blue-500 w-1 ml-24 mt-10 " style="border:2.2px dashed black">
+    </div>
 
-       </div>
-    
-    
-                <div class="mt-24 ml-20">
-                    <p class="text-white text-3xl">Innovating with a simple goal</p>
-                
-                
-                    <p class="text-gray-400 text-xl mt-10">Our company was founded with a simple goal to make <br> 
-                    techology accessible and fun for everyone. We belive that <br>
-                software and gaming should be designed with the user in mind, <br>
-            and that's why put our heart and soul into every project we <br>
-        take on. we are constantly pushing the boundaries of what's <br>
-    possible and looking for new ways to bring joy to our users.</p>
+    <div class="h-auto md:h-screen px-4 md:px-20">
+        <div class="flex flex-col md:flex-row items-center md:items-start">
+            <div>
+                <div class="mt-10 md:mt-20">
+                    <span class="text-4xl md:text-7xl bg-gradient-to-r font-bold from-blue-600 to-pink-500 text-transparent bg-clip-text">Who We Are?</span>
+                </div>
+                <div class="mt-6 md:mt-10">
+                    <p class="text-white text-lg md:text-3xl">We are a team of passionate technology <br class="hidden md:block"> 
+                        experts and gaming enthusiasts, dedicated <br class="hidden md:block">
+                        to delivering easy + quality software and <br class="hidden md:block">
+                        immersive gaming experiences.
+                    </p>
+                </div>
+            </div>
             
-                </div>
-       
-    
+            <div class="h-20 md:h-96 bg-blue-500 w-1 mt-10 md:ml-24" style="border:2.2px dashed black"></div>
+        
+            <div class="mt-10 md:mt-24 md:ml-20">
+                <p class="text-white text-lg md:text-3xl">Innovating with a simple goal</p>
+                <p class="text-gray-400 text-sm md:text-xl mt-4 md:mt-10">Our company was founded with a simple goal to make <br class="hidden md:block"> 
+                    technology accessible and fun for everyone. We believe that <br class="hidden md:block">
+                    software and gaming should be designed with the user in mind, <br class="hidden md:block">
+                    and that's why we put our heart and soul into every project we <br class="hidden md:block">
+                    take on. We are constantly pushing the boundaries of what's <br class="hidden md:block">
+                    possible and looking for new ways to bring joy to our users.</p>
             </div>
-           <div class="flex justify-end mt-20 mr-30">
-            <span class="text-5xl  bg-gradient-to-r font-bold from-blue-600 to-pink-500 text-transparent bg-clip-text ">We Serve</span>
-           </div>
+        </div>
 
+        <div class="flex justify-end mt-10 md:mt-20">
+            <span class="text-3xl md:text-5xl bg-gradient-to-r font-bold from-blue-600 to-pink-500 text-transparent bg-clip-text">We Serve</span>
+        </div>
 
-
-           <div class="flex gap-5 ml-20 mt-10">
-            <div class="h-26 w-110 bg-gray-800 flex items-center p-10 rounded-lg hover:bg-gray-900 mb-8 shadow-sm transition-all duration-500 hover:shadow-pink-400 shadow-purple-800">
-  <div class="h-8 w-8">
-    <img src="img9.png" alt="loading">
-
-  </div>
-  <h1 class="pl-2 text-white text-xl">Web Development
-
-  </h1>
-            </div>
-            <div class="h-26 w-110 bg-gray-800 flex items-center p-10 rounded-lg hover:bg-gray-900 mb-8 shadow-sm transition-all duration-500 hover:shadow-pink-400 shadow-purple-800">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10   px-4 md:px-20">
+            <div class="h-26 w-full bg-gray-800 flex items-center p-6 rounded-lg hover:bg-gray-900 shadow-sm transition-all duration-500 hover:shadow-pink-400 shadow-purple-800">
                 <div class="h-8 w-8">
-                  <img src="img9.png" alt="loading">
-              
+                    <img src="img9.png" alt="Web Development">
                 </div>
-                <h1 class="pl-2 text-white text-xl">Mobile App Development
-              
-                </h1>
-                          </div>
-                          <div class="h-26 w-110 bg-gray-800 flex items-center p-10 rounded-lg hover:bg-gray-900 mb-8 shadow-sm transition-all duration-500 hover:shadow-pink-400 shadow-purple-800">
-                            <div class="h-8 w-8">
-                              <img src="img9.png" alt="loading">
-                          
-                            </div>
-                            <h1 class="pl-2 text-white text-xl">Game Development
-                          
-                            </h1>
-                                      </div>
-            
-           </div>
-           <div class="flex gap-5 ml-20 ">
-            <div class="h-26 w-110 bg-gray-800 flex items-center p-10 rounded-lg hover:bg-gray-900 mb-8 shadow-sm transition-all duration-500 hover:shadow-pink-400 shadow-purple-800">
-  <div class="h-8 w-8">
-    <img src="img9.png" alt="loading">
-
-  </div>
-  <h1 class="pl-2 text-white text-xl">Ul/UX Design
-
-  </h1>
+                <h1 class="pl-2 text-white text-lg">Web Development</h1>
             </div>
-            <div class="h-26 w-110 bg-gray-800 flex items-center p-10 rounded-lg hover:bg-gray-900 mb-8 shadow-sm transition-all duration-500 hover:shadow-pink-400 shadow-purple-800">
+            <div class="h-26 w-full bg-gray-800 flex items-center p-6 rounded-lg hover:bg-gray-900 shadow-sm transition-all duration-500 hover:shadow-pink-400 shadow-purple-800">
                 <div class="h-8 w-8">
-                  <img src="img9.png" alt="loading">
-              
+                    <img src="img9.png" alt="Mobile App Development">
                 </div>
-                <h1 class="pl-2 text-white text-xl">AR/VR Application
-              
-                </h1>
-                          </div>
-                          <div class="h-26 w-110 bg-gray-800 flex items-center p-10 rounded-lg hover:bg-gray-900 mb-8 shadow-sm transition-all duration-500 hover:shadow-pink-400 shadow-purple-800">
-                            <div class="h-8 w-8">
-                              <img src="img9.png" alt="loading">
-                          
-                            </div>
-                            <h1 class="pl-2 text-white text-xl">Animation & Films
-                          
-                            </h1>
-                                      </div>
-            
-           </div>
-           <div class="flex justify-end">
-            <p class="text-gray-400 text-xl mr-40 hover:text-violet-700 ">more...</p>
-
-
-           
-           </div>
-           <div class="h-[450px] w-screen bg-[url(img10.png)] bg-no-repeat bg-cover  mt-8">
-            <div class="bg-black/90 h-full">
-                <div class="flex justify-center items-center">
-                    <div class="mt-40">
-                        <SPAN class="text-7xl  bg-gradient-to-r font-bold from-blue-700 to-pink-500 text-transparent bg-clip-text ">NEED A CONSOLTATION?</SPAN>
-                        <P class="text-white text-2xl text-center">Drop us a line! We are here to answer your question 24/7</P>
-                        <button class="h-10 w-30 font-bold  text-white rounded-4xl bg-blue-600 ml-[380px] mt-4"><a href="#">Contact us</a></button>
-                    </div>
-                    
-                </div>
+                <h1 class="pl-2 text-white text-lg">Mobile App Development</h1>
             </div>
-             
-           
-
-           </div>
-       
-<div class="h-[400px] w-screen bg-gray-800">
-
-    <div class="flex">
-        <div class="pt-20 pl-20">
-            <a href="task3.html"> <img class="h-14 w-32" src="img45png.png" alt="parlee"></a>
-            <p class="text-gray-400 mt-10">Pralee is a leading software and gaming company dedicated to providing <br>
-            innovating , easy and fun products.</p>
-           
+            <div class="h-26 w-full bg-gray-800 flex items-center p-6 rounded-lg hover:bg-gray-900 shadow-sm transition-all duration-500 hover:shadow-pink-400 shadow-purple-800">
+                <div class="h-8 w-8">
+                    <img src="img9.png" alt="Game Development">
+                </div>
+                <h1 class="pl-2 text-white text-lg">Game Development</h1>
+            </div>
+            <div class="h-26 w-full bg-gray-800 flex items-center p-6 rounded-lg hover:bg-gray-900 shadow-sm transition-all duration-500 hover:shadow-pink-400 shadow-purple-800">
+                <div class="h-8 w-8">
+                    <img src="img9.png" alt="UI/UX Design">
+                </div>
+                <h1 class="pl-2 text-white text-lg">UI/UX Design</h1>
+            </div>
+            <div class="h-26 w-full bg-gray-800 flex items-center p-6 rounded-lg hover:bg-gray-900 shadow-sm transition-all duration-500 hover:shadow-pink-400 shadow-purple-800">
+                <div class="h-8 w-8">
+                    <img src="img9.png" alt="AR/VR Application">
+                </div>
+                <h1 class="pl-2 text-white text-lg">AR/VR Application</h1>
+            </div>
+            <div class="h-26 w-full bg-gray-800 flex items-center p-6 rounded-lg hover:bg-gray-900 shadow-sm transition-all duration-500 hover:shadow-pink-400 shadow-purple-800">
+                <div class="h-8 w-8">
+                    <img src="img9.png" alt="Animation & Films">
+                </div>
+                <h1 class="pl-2 text-white text-lg">Animation & Films</h1>
+            </div>
         </div>
-    
-    
-        <div>
-            <div class="flex mt-20 ml-20">
+
+        <div class="flex justify-end mt-4">
+            <p class="text-gray-400 text-sm md:text-xl mr-10 hover:text-violet-700">more...</p>
+        </div>
+    </div>
+
+    <div class="h-[450px] w-full bg-[url(img10.png)] bg-no-repeat bg-cover mt-20">
+        <div class="bg-black/90 h-full flex justify-center items-center">
+            <div class="text-center">
+                <span class="text-4xl md:text-7xl bg-gradient-to-r font-bold from-blue-700 to-pink-500 text-transparent bg-clip-text">NEED A CONSULTATION?</span>
+                <p class="text-white text-lg md:text-2xl mt-4">Drop us a line! We are here to answer your questions 24/7</p>
+                <button class="h-10 px-6 font-bold text-white rounded-full bg-blue-600 hover:bg-blue-700 transition mt-4"><a href="#">Contact us</a></button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="h-auto bg-gray-800 px-4 md:px-20 py-10">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div>
+                <a href="task3.html"><img class="h-14 w-auto" src="img45png.png" alt="Pralee"></a>
+                <p class="text-gray-400 mt-4">Pralee is a leading software and gaming company dedicated to providing innovative, easy, and fun products.</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-10 mt-10 md:mt-0">
                 <div>
-                    <h1 class="text-white text-2xl ">Discover</h1>
-                    <div class="mt-10">
-                        <a class="text-gray-400 hover:text-white" href="#">Services</a><br>
-                    </div>
-                   <div class="mt-6">
-                    <a class="text-gray-400  hover:text-white" href="#">Gaming</a>
-                   </div>
-                    
-        
-        
+                    <h1 class="text-white text-lg">Discover</h1>
+                    <ul class="mt-4 space-y-2">
+                        <li><a class="text-gray-400 hover:text-white" href="#">Services</a></li>
+                        <li><a class="text-gray-400 hover:text-white" href="#">Gaming</a></li>
+                    </ul>
                 </div>
-                <div class="ml-30">
-                    <h1 class="text-white text-2xl">About</h1>
-                    <div class="mt-10">
-                        <a class="text-gray-400  hover:text-white" href="#">About Us</a><br>
-                    </div>
-                   <div class="mt-6">
-                    <a class="text-gray-400  hover:text-white" href="#">Contact Us</a>
-                   </div>
-        
+                <div>
+                    <h1 class="text-white text-lg">About</h1>
+                    <ul class="mt-4 space-y-2">
+                        <li><a class="text-gray-400 hover:text-white" href="#">About Us</a></li>
+                        <li><a class="text-gray-400 hover:text-white" href="#">Contact Us</a></li>
+                    </ul>
                 </div>
-                <div class="ml-30">
-                    <h1 class="text-white text-2xl">Follow Us</h1>
-    
-    <div class="flex mt-10">
-        <div>
-            <a href="#"><img class="h-6 w-6" src="img11.png"></a>
-        </div>
-        <div>
-            <a href="#"><p class="text-gray-400 pl-2 hover:text-white">Linkedin</p></a>
-        </div>
-    </div>
-    
-    <div class="flex mt-4">
-        <div>
-            <a href="#"><img class="h-6 w-6" src="img12.png"></a>
-        </div>
-        <div>
-            <a href="#"><p class="text-gray-400 pl-2 hover:text-white">Youtube</p></a>
-        </div>
-    </div>
-    <div class="flex mt-4">
-        <div>
-            <a href="#"><img class="h-6 w-6" src="img13.png"></a>
-        </div>
-        <div>
-            <a href="#"><p class="text-gray-400 pl-2 hover:text-white">Github</p></a>
-        </div>
-    </div>
-    
-                   
-                    
-                   
-        
+                <div>
+                    <h1 class="text-white text-lg">Follow Us</h1>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center">
+                            <img class="h-6 w-6" src="img11.png" alt="LinkedIn">
+                            <a class="text-gray-400 hover:text-white pl-2" href="#">LinkedIn</a>
+                        </li>
+                        <li class="flex items-center">
+                            <img class="h-6 w-6" src="img12.png" alt="YouTube">
+                            <a class="text-gray-400 hover:text-white pl-2" href="#">YouTube</a>
+                        </li>
+                        <li class="flex items-center">
+                            <img class="h-6 w-6" src="img13.png" alt="GitHub">
+                            <a class="text-gray-400 hover:text-white pl-2" href="#">GitHub</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-    
         </div>
-    
-    
-    </div>
-    <div class="h-[1px] w-full bg-white mt-20">
-    </div>
-    <div class="flex justify-center mt-4">
-        <p class="text-gray-400">&copy;2023 Pralee Technology. All Rights Reserced</p></p>
-    </div>
-
-    
-
-
-</div>
-
-       </div>
-
-
-        
-
-   
-  
+        <div class="h-[1px] w-full bg-white mt-10"></div>
+        <div class="flex justify-center mt-4">
+            <p class="text-gray-400 text-sm">&copy;2023 Pralee Technology. All Rights Reserved</p>
+        </div>
+    </footer>
 </body>
 </html>

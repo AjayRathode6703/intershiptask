@@ -4,36 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-   
-
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Responsive Quiz Form</title>
 </head>
 
-<body class="bg-[#01061d] text-white">
-    <div class="flex justify-center">
-        <div>
-
+<body class="bg-[#01061d] bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white min-h-screen flex items-center justify-center">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-8 p-6 w-full max-w-5xl">
+        <div class="flex justify-center">
+            <img class="w-32 h-32 sm:w-40 sm:h-40 md:w-60 md:h-60 rounded-full shadow-lg" src="boy.png" alt="Boy Illustration">
         </div>
-        <img class="ml-8 mt-20" src="boy.png" alt="">
 
-        <div class="h-[530px] w-[430px] mt-20 bg-[#334679] shadow-2xl shadow-blue-900 ml-5 rounded-sm">
-
-
-            <h1 class="text-2xl font-bold ml-26 mt-3">Create a Quize Questions</h1>
-            <h1 class="text-2xl font-bold ml-4 mt-4">Question</h1>
-            <textarea  class=" border-2 border-gray-300 h-10 w-96 rounded-md ml-4 pl-3 mt-2 hover:border-sky-500 focus:outline-sky-500" id="que" type="text" placeholder="Enter your Question"></textarea><br>
-            <h1  class="text-2xl font-bold ml-4 mt-4"> Add Options</h1>
-            <input class=" border-2 border-gray-300 h-10 w-96 rounded-md ml-4 pl-3 mt-2 hover:border-sky-500 focus:outline-sky-500" id="op1" type="text" placeholder="Enter your op1"><br>
-            <input class=" border-2 border-gray-300 h-10 w-96 rounded-md ml-4 pl-3 mt-2 hover:border-sky-500 focus:outline-sky-500" id="op2" type="text" placeholder="Enter your op2"><br>
-            <input class=" border-2 border-gray-300 h-10 w-96 rounded-md ml-4 pl-3 mt-2 hover:border-sky-500 focus:outline-sky-500" id="op3" type="text" placeholder="Enter your op3"><br>
-            <input class=" border-2 border-gray-300 h-10 w-96 rounded-md ml-4 pl-3 mt-2 hover:border-sky-500 focus:outline-sky-500" id="op4" type="text" placeholder="Enter your op4"><br>
-            <input class=" border-2 border-gray-300 h-10 w-96 rounded-md ml-4 pl-3 mt-2 hover:border-sky-500 focus:outline-sky-500" id="ans" type="text" placeholder="ans"><br>
-            <button class="h-10 w-96 text-[#2EF2FF] font-bold hover:bg-[#01061d] mt-3 bg-[#263466] rounded-md ml-4 text-md "  onclick="saveQue()">Add Quetions</button>
-            <div id="show">
-
-            </div>
-
+        <div class="h-auto w-full sm:w-[90%] md:w-[430px] bg-[#334679] shadow-2xl shadow-blue-900 rounded-lg p-6">
+            <h1 class="text-2xl sm:text-3xl font-bold text-center mb-4">Create a Quiz Question</h1>
+            <h1 class="text-xl sm:text-2xl font-bold ml-4 mt-4">Question</h1>
+            <textarea class="border-2 text-black border-gray-300 h-10 w-full rounded-md mt-2 p-2 hover:border-sky-500 focus:outline-sky-500" id="que" placeholder="Enter your Question"></textarea>
+            
+            <h1 class="text-xl sm:text-2xl font-bold ml-4 mt-4">Add Options</h1>
+            <input class="border-2 text-black border-gray-300 h-10 w-full rounded-md mt-2 p-2 hover:border-sky-500 focus:outline-sky-500" id="op1" type="text" placeholder="Enter your op1">
+            <input class="border-2 text-black border-gray-300 h-10 w-full rounded-md mt-2 p-2 hover:border-sky-500 focus:outline-sky-500" id="op2" type="text" placeholder="Enter your op2">
+            <input class="border-2 text-black border-gray-300 h-10 w-full rounded-md mt-2 p-2 hover:border-sky-500 focus:outline-sky-500" id="op3" type="text" placeholder="Enter your op3">
+            <input class="border-2 text-black border-gray-300 h-10 w-full rounded-md mt-2 p-2 hover:border-sky-500 focus:outline-sky-500" id="op4" type="text" placeholder="Enter your op4">
+            <input class="border-2 text-black border-gray-300 h-10 w-full rounded-md mt-2 p-2 hover:border-sky-500 focus:outline-sky-500" id="ans" type="text" placeholder="Answer">
+            
+            <button class="h-12 w-full text-[#2EF2FF] font-bold hover:bg-[#01061d] mt-4 bg-gradient-to-r from-blue-600 to-blue-800 rounded-md text-lg transition-all duration-300 transform hover:scale-105" onclick="saveQue()">Add Question</button>
+            <div id="show" class="mt-4"></div>
         </div>
     </div>
     <script src="script.js"></script>

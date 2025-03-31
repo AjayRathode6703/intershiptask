@@ -3,104 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <title>Document</title>
-    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login Page</title>
 </head>
-<body class="bg-[#01061d] text-white">
+<body class="bg-gradient-to-r from-[#01061d] to-[#1a1f3a] text-white">
     <div class="flex justify-center">
-        <div class="h-155 w-96 bg-[#334679] shadow-2xl shadow-blue-900 mt-10 rounded-sm  ">
-            <div class="flex">
-                <img class="h-12 w-12 rounded-full mt-4 ml-5 " src="logo.png">
-                <h1 class="font-bold text-2xl mt-5 pl-0.5">LOGIN</h1>
+        <div class="h-auto w-96 bg-[#2c3e50] shadow-2xl shadow-blue-900 mt-10 rounded-lg">
+            <div class="flex items-center p-5">
+                <img class="h-12 w-12 rounded-full" src="logo.png" alt="Logo">
+                <h1 class="font-bold text-2xl ml-3">LOGIN</h1>
             </div>
-            <div class="ml-8 mt-8">
+            <div class="px-8">
                 <h1 class="font-bold text-white text-4xl">Welcome Back!</h1>
-                <p class="p-2">Please enter login details below</p>
+                <p class="mt-2 text-gray-300">Please enter your login details below</p>
             </div>
-         
-            <h1 class="ml-8 mt-2">Username</h1>
-            <input class=" mt-2 border-2 border-gray-300 h-10 w-82 rounded-md ml-8 pl-2   type="text" placeholder="Enter the username" id="uname">
-            <h1 class="ml-8 mt-2">Password</h1>
-            <input class=" mt-2 border-2 border-gray-300 h-10 w-82 rounded-md ml-8 pl-2   type="text" placeholder="Enter the password" id="password"> 
-            <a class="ml-60 hover:text-[#2EF2FF]" href="#">Forgot password?</a>
-             <h1 class="ml-8 mt-2 text-md font-semibold">Login Type</h1>
-             <div class="flex">
-                <label class="flex ml-10 mt-3" id="1">
-                    <input type="radio" id="Admin" name="op"><h1 class="pl-2"  >Admin</h1>
-                 </label>
-                 <label class="flex ml-10 mt-3" id="2">
-                    <input type="radio" id="Student" name="op"><h1 class="pl-2"  >Student</h1>
-                 </label>
-             </div>
-             <button class="h-10 w-80 ml-8 text-[#2EF2FF] font-bold hover:bg-[#01061d] mt-3 rounded-md bg-[#263466]" onclick="chack()">Log in</button>
-             <div class="flex mt-2 justify-center">
-                <div class="h-0.5 w-27 mt-3 mr-1 bg-gray-500">
-
+            <div class="px-8 mt-4">
+                <label for="uname" class="block font-semibold">Username</label>
+                <input class="mt-2 border-2 border-gray-300 h-10 w-full rounded-md pl-2 text-black" type="text" placeholder="Enter your username" id="uname">
+            </div>
+            <div class="px-8 mt-4">
+                <label for="password" class="block font-semibold">Password</label>
+                <input class="mt-2 border-2 border-gray-300 h-10 w-full rounded-md pl-2 text-black" type="password" placeholder="Enter your password" id="password">
+            </div>
+            <div class="px-8 mt-2 text-right">
+                <a class="text-[#2EF2FF] hover:underline" href="#">Forgot password?</a>
+            </div>
+            <div class="px-8 mt-4">
+                <h1 class="font-semibold">Login Type</h1>
+                <div class="flex mt-2">
+                    <label class="flex items-center">
+                        <input type="radio" id="Admin" name="op" class="mr-2">
+                        <span>Admin</span>
+                    </label>
+                    <label class="flex items-center ml-6">
+                        <input type="radio" id="Student" name="op" class="mr-2">
+                        <span>Student</span>
+                    </label>
                 </div>
-                <div>
-                <p>Or continue</p>
-                </div>
-                <div class="h-0.5 w-27 mt-3 ml-1  bg-gray-500">
-
-                </div>
-             </div>
-             <div class="h-10 w-80 border-2 ml-8 m-2 rounded-md flex justify-center">
-                <div>
-<img class="h-6 mt-2 w-6" src="google.png">
-                </div>
-                <div class="mt-1 pl-2">
-                 <a href="#">Log in with Google</a>
-                </div>
-             </div>
-             <div class="flex justify-center">
-                <p>Don't have an account?<a class="text-[#2EF2FF] pl-1" href="task7.html">Sign Up</a></p>
-             </div>
-             
-            
-             
-            
+            </div>
+            <div class="px-8 mt-6">
+                <button class="h-10 w-full text-[#2EF2FF] font-bold hover:bg-[#1a1f3a] rounded-md bg-[#34495e]" onclick="chack()">Log in</button>
+            </div>
+            <div class="flex items-center mt-6 justify-center">
+                <div class="h-0.5 w-20 bg-gray-500"></div>
+                <p class="mx-2">Or continue</p>
+                <div class="h-0.5 w-20 bg-gray-500"></div>
+            </div>
+            <div class="h-10 w-80 border-2 mx-auto mt-4 rounded-md flex items-center justify-center">
+                <img class="h-6 w-6" src="google.png" alt="Google">
+                <a href="#" class="ml-2">Log in with Google</a>
+            </div>
+            <div class="flex justify-center mt-4 pb-4">
+                <p>Don't have an account? <a class="text-[#2EF2FF] hover:underline" href="task7.html">Sign Up</a></p>
+            </div>
         </div>
-
     </div>
 
     <script>
+        function chack() {
+            const username = document.getElementById('uname').value;
+            const password = document.getElementById('password').value;
+            const isAdmin = document.getElementById('Admin').checked;
+            const isStudent = document.getElementById('Student').checked;
 
-      
-
-        function chack(){
-
-
-if(document.getElementById('uname').value == ""){
-    alert("please fill username feild ")
-
-window.location.href= "task6.html"
-
-}
-else if( document.getElementById('password').value ==""){
-    alert("please fill password feild ")
-
-window.location.href= "task6.html"
-
-}
- 
-else{
-    if(document.getElementById('Admin').checked){
-                console.log('cakked')
-            window.location.href ="task8.html"
+            if (username === "") {
+                alert("Please fill in the username field.");
+                return;
+            }
+            if (password === "") {
+                alert("Please fill in the password field.");
+                return;
+            }
+            if (isAdmin) {
+                window.location.href = "task8.html";
+            } else if (isStudent) {
+                window.location.href = "start.html";
+            } else {
+                alert("Please select a login type.");
+                return;
+            }
+            alert("✔ Login successful");
         }
-        else if(document.getElementById('Student').checked){
-            window.location.href ="start.html"
-        }
-    alert(" ✔ login successfull")
-}
-          
-    }
-
-
-    
-
-        
     </script>
 </body>
 </html>

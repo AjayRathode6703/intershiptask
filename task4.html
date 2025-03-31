@@ -1,68 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="task5.css">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
-<body class="bg-gray-400 flex justify-center  mt-50">
-
-    <div class="w-123 h-123 border-2 bg-white border-blue-500 rounded-2xl">
-        <h1 class="text-3xl  text-blue-500 font-bold text-center mt-10"> simple calculator</h1>
-        <input class="h-10 w-50 border-blue-500 border-2 ml-10 mt-20 rounded-xl pl-3" type="text" id="input1">
-        <input class="h-10 w-50 border-blue-500 border-2 rounded-xl pl-3" type="text" id="input2">
-        <h1 class="h-10 w-60 border-2 border-blue-500 ml-30 rounded-2xl text-center mt-10" id="show"></h1>
-        <div class="mt-20">
-            <button class="h-14 w-14 bg-gray-400 rounded-xl text-2xl ml-12" onclick="calsi()">+</button>
-            <button class="h-14 w-14 bg-gray-400 rounded-xl text-2xl ml-12" onclick="calsi1()" >-</button>
-            <button class="h-14 w-14 bg-gray-400 rounded-xl text-2xl ml-12"onclick="calsi2()" >*</button>
-            <button class="h-14 w-14 bg-gray-400 rounded-xl text-2xl ml-12" onclick="calsi3()">/</button>
+<body class="flex items-center justify-center h-screen bg-gray-900">
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-80 text-white">
+        <input id="display" class="w-full text-right text-2xl p-2 bg-gray-700 rounded mb-4 outline-none" disabled>
+        <div class="grid grid-cols-4 gap-2">
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn bg-red-500">C</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn">/</button>
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn">*</button>
+            <button class="btn">0</button>
+            <button class="btn">.</button>
+            <button class="btn">=</button>
+            <button class="btn">+</button>
+            <button class="btn col-span-2">-</button>
         </div>
     </div>
-
+    
     <script>
-      function calsi(){
-        var input1=document.getElementById('input1')
-        var input2=document.getElementById('input2')
-        var show=parseInt(input1.value)+parseInt(input2.value)
-        document.getElementById('show').innerHTML=show
-        
+        const display = document.getElementById("display");
+        const buttons = document.querySelectorAll(".btn");
 
-      }
-      function calsi1(){
-        var input1=document.getElementById('input1')
-        var input2=document.getElementById('input2')
-        var show=parseInt(input1.value)-parseInt(input2.value)
-        document.getElementById('show').innerHTML=show
-        
-
-      }
-      function calsi2(){
-        var input1=document.getElementById('input1')
-        var input2=document.getElementById('input2')
-        var show=parseInt(input1.value)*parseInt(input2.value)
-        document.getElementById('show').innerHTML=show
-        
-
-      }
-      function calsi3(){
-        var input1=document.getElementById('input1')
-        var input2=document.getElementById('input2')
-        var show=parseInt(input1.value)/parseInt(input2.value)
-        document.getElementById('show').innerHTML=show
-        
-
-      }
-
-            
-          
-
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                if (button.textContent === "C") {
+                    display.value = "";
+                } else if (button.textContent === "=") {
+                    try {
+                        display.value = eval(display.value);
+                    } catch {
+                        display.value = "Error";
+                    }
+                } else {
+                    display.value += button.textContent;
+                }
+            });
+        });
     </script>
-
 </body>
-
 </html>

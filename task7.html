@@ -3,69 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Registration Form</title>
 </head>
-<body  class="bg-[#01061d] text-white">
-   <div class="flex justify-center items-center mt-4">
-    <div class="h-[670px] w-96 bg-[#334679] shadow-2xl shadow-blue-900 mt-6 rounded-sm">
-        <h1 class="text-2xl font-bold flex justify-center mt-6">Create An Account</h1>
-        <h4 class=" ml-5 m-2 ">Full Name</h4>
-        <input class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 pl-3 hover:border-sky-500 focus:outline-sky-500" id="input" type="text" placeholder="Enter your fullname">
-
+<body class="bg-[#01061d] text-white min-h-screen flex items-center justify-center">
+    <div class="h-auto w-96 bg-[#334679] shadow-2xl shadow-blue-900 rounded-lg p-6">
+        <h1 class="text-2xl font-bold text-center mb-6">Create An Account</h1>
         
-        <h4 class=" ml-5 m-2 ">Email Address</h4>
-        <input class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 pl-3 hover:border-sky-500 focus:outline-sky-500"  id="input2" type="text" placeholder="Enter your email address">
-        <h4 class=" ml-5 m-2 ">City</h4>
-        <input class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 pl-3 hover:border-sky-500 focus:outline-sky-500"  id="input3" type="text" placeholder="Enter your city">
-        <h4 class=" ml-5 m-2 ">Address</h4>
-        <input class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 pl-3 hover:border-sky-500 focus:outline-sky-500"  id="input4" type="text" placeholder="Enter your address">
-        <h4 class=" ml-5 m-2 ">password</h4>
-        <input class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 pl-3 hover:border-sky-500 focus:outline-sky-500"  id="input5" type="text" placeholder="Enter your password">
-        <h4 class=" ml-5 m-2 ">Confirm password</h4>
-        <input class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 pl-3 hover:border-sky-500 focus:outline-sky-500"  id="input6" type="text" placeholder="Enter your confirm password"><br>
-        <a href="#"><button class=" h-10 w-88 text-[#2EF2FF] font-bold hover:bg-[#01061d] mt-3 bg-[#263466] rounded-md ml-4 text-md   " onclick="ragstr()">REGISTER</button></a>
-        <h5 class="flex justify-center mt-4">Already have an account? <a class="text-md pl-2 font-bold text-[#2EF2FF]" href="task6.html">Sign In</a></h5>
-       
+        <form id="registrationForm" onsubmit="register(event)">
+            <label class="block mb-2 font-medium" for="input">Full Name</label>
+            <input class="border-2 text-black border-gray-300 h-10 w-full rounded-md pl-3 mb-4 hover:border-sky-500 focus:outline-sky-500" id="input" type="text" placeholder="Enter your fullname" required>
+            
+            <label class="block mb-2 font-medium" for="input2">Email Address</label>
+            <input class="border-2 text-black border-gray-300 h-10 w-full rounded-md pl-3 mb-4 hover:border-sky-500 focus:outline-sky-500" id="input2" type="email" placeholder="Enter your email address" required>
+            
+            <label class="block mb-2 font-medium" for="input3">City</label>
+            <input class="border-2 text-black border-gray-300 h-10 w-full rounded-md pl-3 mb-4 hover:border-sky-500 focus:outline-sky-500" id="input3" type="text" placeholder="Enter your city" required>
+            
+            <label class="block mb-2 font-medium" for="input4">Address</label>
+            <input class="border-2 text-black border-gray-300 h-10 w-full rounded-md pl-3 mb-4 hover:border-sky-500 focus:outline-sky-500" id="input4" type="text" placeholder="Enter your address" required>
+            
+            <label class="block mb-2 font-medium" for="input5">Password</label>
+            <input class="border-2 text-black border-gray-300 h-10 w-full rounded-md pl-3 mb-4 hover:border-sky-500 focus:outline-sky-500" id="input5" type="password" placeholder="Enter your password" required>
+            
+            <label class="block mb-2 font-medium" for="input6">Confirm Password</label>
+            <input class="border-2 text-black border-gray-300 h-10 w-full rounded-md pl-3 mb-4 hover:border-sky-500 focus:outline-sky-500" id="input6" type="password" placeholder="Confirm your password" required>
+            
+            <button type="submit" class="h-10 w-full text-[#2EF2FF] font-bold hover:bg-[#01061d] bg-[#263466] rounded-md text-md mt-3">REGISTER</button>
+        </form>
+        
+        <h5 class="text-center mt-4">Already have an account? 
+            <a class="text-md font-bold text-[#2EF2FF]" href="task6.html">Sign In</a>
+        </h5>
     </div>
-   </div>
-   
 
-        <script>
-            var  ragistration=[]
-            function ragstr(){
-                let a=document.getElementById('input').value
-           
-            let c=document.getElementById('input2').value
-            let d=document.getElementById('input3').value
-            let e=document.getElementById('input4').value
-            let f=document.getElementById('input5').value
-            let g=document.getElementById('input6').value
-   var obj={
-   FullName:a,
+    <script>
+        let registration = JSON.parse(localStorage.getItem("registration")) || [];
 
-   emailaddress:c,
-   city:d,
-   address:e,
-   password:f,
-   confirmpassword:g,
-   }
-   ragistration.push(obj)
-   console.log(ragistration)
-   localStorage.setItem("ragistration",JSON.stringify(ragistration))
-alert( "  ✔ registration success")
-window.location.href = "task6.html";
+        function register(event) {
+            event.preventDefault();
+            
+            const fullName = document.getElementById('input').value;
+            const email = document.getElementById('input2').value;
+            const city = document.getElementById('input3').value;
+            const address = document.getElementById('input4').value;
+            const password = document.getElementById('input5').value;
+            const confirmPassword = document.getElementById('input6').value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
             }
-          
 
-           
-        </script>
-    
+            const user = {
+                fullName,
+                email,
+                city,
+                address,
+                password
+            };
 
-        
-
-
-    
-    
+            registration.push(user);
+            localStorage.setItem("registration", JSON.stringify(registration));
+            alert("✔ Registration successful!");
+            window.location.href = "task6.html";
+        }
+    </script>
 </body>
 </html>

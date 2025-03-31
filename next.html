@@ -1,109 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <title>Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Country Quiz</title>
     <style>
-        #aj{
+        #aj {
             font-size: 32px;
             text-align: center;
-            background: linear-gradient(45deg, transparent,,transparent);
-            border-radius: 6px;
+            background: linear-gradient(45deg, #4caf50, #2196f3);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .option:hover {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        .next-btn:hover {
+            background-color: #2196f3;
+            color: white;
         }
     </style>
 </head>
 
-<body class="bg-[#01061d] text-white">
-    <div class="flex justify-center mt-50">
-        <div class="h-100 w-100 bg-[#334679] shadow-2xl shadow-blue-900 mt-6 rounded-sm">
-            <div id="aj">Country Quiz
-
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
+    <div class="w-[400px] bg-gray-800 shadow-lg rounded-lg p-6">
+        <div id="aj" class="mb-4">Country Quiz</div>
+        <h1 class="text-lg font-bold mb-4">Que. No. <span id="qno"></span>: <span id="que"></span></h1>
+        <div class="space-y-3">
+            <div class="option border-2 border-gray-300 rounded-md p-3" onclick="selectOption(1)">
+                A. <input name="options" type="radio" /> <span id="op1"></span>
             </div>
-            <h1 class="text-xl font-bold mt-3 ml-2">Que. No. <span id="qno"></span> <span id="que"></span></h1>
-            <div class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 mt-2 pl-3 hover:border-sky-500 focus:outline-sky-500">
-                A. <input  name="options" type="radio" onclick="check()" /> <span id="op1"></span><br />
+            <div class="option border-2 border-gray-300 rounded-md p-3" onclick="selectOption(2)">
+                B. <input name="options" type="radio" /> <span id="op2"></span>
             </div>
-            <div class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 #01061dpl-3  mt-2 hover:border-sky-500 focus:outline-sky-500">
-                B. <input  name="options" type="radio" onclick="check()" /> <span id="op2"></span><br />
+            <div class="option border-2 border-gray-300 rounded-md p-3" onclick="selectOption(3)">
+                C. <input name="options" type="radio" /> <span id="op3"></span>
             </div>
-            <div class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 pl-3  mt-2 hover:border-sky-500 focus:outline-sky-500">
-                C. <input  name="options" type="radio" onclick="check()" /> <span id="op3"></span><br />
+            <div class="option border-2 border-gray-300 rounded-md p-3" onclick="selectOption(4)">
+                D. <input name="options" type="radio" /> <span id="op4"></span>
             </div>
-            <div class=" border-2 border-gray-300 h-10 w-88 rounded-md ml-4 pl-3  mt-2 hover:border-sky-500 focus:outline-sky-500">
-                D. <input  name="options" type="radio" onclick="check()" /> <span id="op4"></span><br />
-            </div> 
-            <div class="h-0.5 w-88 bg-[#01061d] mt-3 ml-3"></div>
-            
-           
-            <button class="h-10 w-20 mt-4 hover:bg-[#01061d] text-[#2EF2FF] ml-70 bg-[#263466] rounded-md" onclick="next()"> Next </button>
         </div>
+        <button class="next-btn mt-6 w-full bg-gray-700 text-blue-400 py-2 rounded-md" onclick="next()">Next</button>
     </div>
-    
-    
-   
-   
+
     <script>
-        var listOfQue = JSON.parse(localStorage.getItem("questions"))
-        var currentIndex = 0
-        var score = 0
-        setQuestion()
+        var listOfQue = JSON.parse(localStorage.getItem("questions")) || [
+            { quesion: "What is the capital of France?", a: "Paris", b: "London", c: "Berlin", d: "Madrid", ans: "Paris" },
+            { quesion: "What is the capital of Germany?", a: "Vienna", b: "Berlin", c: "Rome", d: "Amsterdam", ans: "Berlin" }
+        ];
+        var currentIndex = 0;
+        var score = 0;
+
+        setQuestion();
+
         function setQuestion() {
-            var question = listOfQue[currentIndex]
-            document.getElementById("qno").innerHTML = currentIndex + 1
-            document.getElementById("que").innerHTML = question.quesion
-            document.getElementById("op1").innerHTML = question.a
-            document.getElementById("op2").innerHTML = question.b
-            document.getElementById("op3").innerHTML = question.c
-            document.getElementById("op4").innerHTML = question.d
+            var question = listOfQue[currentIndex];
+            document.getElementById("qno").innerHTML = currentIndex + 1;
+            document.getElementById("que").innerHTML = question.quesion;
+            document.getElementById("op1").innerHTML = question.a;
+            document.getElementById("op2").innerHTML = question.b;
+            document.getElementById("op3").innerHTML = question.c;
+            document.getElementById("op4").innerHTML = question.d;
         }
+
         function next() {
-            if (currentIndex < listOfQue.length) {
-                currentIndex++
-                setQuestion()
-            }else{
-                document.body.innerHTML='<div class="flex justify-center mt-70"><div class=" flex justify-center shadow-2xl shadow-blue-900 rounded-3xl pt-10 h-40 w-[500px] bg-[#334679]"><img class="h-10 w-8 " src="imgtrophy.png"> <br><br><br><h1 class="text-3xl font-bold flex-col ">Congratulation</h1> '+score+'</div></div>'
-                alert("no more questions and your Score is="+score)
+            if (currentIndex < listOfQue.length - 1) {
+                currentIndex++;
+                setQuestion();
+            } else {
+                document.body.innerHTML = `
+                    <div class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                            <h1 class="text-3xl font-bold mb-4">Congratulations!</h1>
+                            <p class="text-lg">Your Score: <span class="text-green-400">${score}</span></p>
+                        </div>
+                    </div>`;
             }
-
         }
-        function check(){
-            var radioButtons = document.getElementsByName("options")
-            var op1Value = document.getElementById("op1").innerText
-            var op2Value = document.getElementById("op2").innerText
-            var op3Value = document.getElementById("op3").innerText
-            var op4Value = document.getElementById("op4").innerText
-            for(var i=0;i<4;i++){
-                var button = radioButtons[i]
-                if(i==0 && button.checked){
-                    if(listOfQue[currentIndex].ans==op1Value){
-                        score++
-                    }
-                }
-                if(i==1 && button.checked){
-                    if(listOfQue[currentIndex].ans==op2Value){
-                        score++
-                    }
-                }
-                if(i==2 && button.checked){
-                    if(listOfQue[currentIndex].ans==op3Value){
-                        score++
-                    }
-                }
-                if(i==3 && button.checked){
-                    if(listOfQue[currentIndex].ans==op4Value){
-                        score++
-                    }
-                }
-                
-
+        document.querySelectorAll('.option').forEach((option, index) => {
+            option.addEventListener('click', () => {
+            option.querySelector('input[type="radio"]').checked = true;
+            });
+        });
+        function selectOption(optionIndex) {
+            var selectedOption = document.getElementById(`op${optionIndex}`).innerText;
+            if (listOfQue[currentIndex].ans === selectedOption) {
+                score++;
             }
         }
     </script>
-
 </body>
 
 </html>

@@ -4,21 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
 
-<body class="bg-[#01061d] text-white flex-col  justify-center  ">
- 
-
-<div class="h-[390px] w-120 ml-150 bg-[#334679] shadow-2xl shadow-blue-900 mt-30 rounded-lg">
-    <h1 class="text-3xl font-bold flex justify-center pt-8">Welcome to Quiz</h1>
-    <div>
-        <img src="quiz.png">
+<body class="bg-[#01061d] text-white flex flex-col justify-center min-h-screen">
+    <div class="max-w-md mx-auto bg-[#334679] shadow-2xl shadow-blue-900 mt-12 rounded-lg p-6 sm:p-8">
+        <h1 class="text-2xl sm:text-3xl font-bold text-center pt-4 sm:pt-8">Welcome to Quiz</h1>
+        <div class="flex justify-center mt-4">
+            <img src="quiz.png" alt="Quiz Image" class="h-24 w-24 sm:h-36 sm:w-36 rounded-full">
+        </div>
+        <div class="flex justify-center mt-6">
+            <button class="h-10 sm:h-12 w-40 sm:w-48 text-[#2EF2FF] font-bold hover:bg-[#01061d] bg-[#263466] rounded-md text-base sm:text-lg">
+                <a href="next.html">Start Quiz</a>
+            </button>
+        </div>
     </div>
-<button class=" h-10 w-88 text-[#2EF2FF] font-bold hover:bg-[#01061d] mt-3 bg-[#263466] rounded-md  text-md ml-16" ><a href="next.html">Start Quiz</a></button>
-</div>
-
     <script src="script.js"></script>
 </body>
 
